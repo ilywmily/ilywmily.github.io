@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class=" text-dark p-5 mx-5 mt-1  border border-dark rounded" > 
+    <p class="font-weight-bold "><h2><b><center>BOOTSTRAP İLE AÇILIR MENÜ (DROPDOWN)</center></b></h2></p>
+
+    <p class="font-weight:bolder;"> Dropdown, açılır menü demektir. Basit bir açılır menü yapalım.</p> 
+<p class="font-weight:bolder;"> 
+ İlk olarak bir div etiketi açmalıyız ve <span class="text-danger">dropdown</span> adında classı olmalı. Div içinde bir buton olmalı ve butona tıklayınca menü açılmasını sağlamalıyız. Butonun bir classı olmalı ve butonun tipini nasıl oluşturmak isterseniz (hangi renk kodu vb. ) buraya yazılmalı. Butonun yanında ok işaretinin olması için <span class="text-danger">dropdown-toggle</span> yazılır. Butona tıklayınca açılan menü için ul etiketi açılır, sınıf oluşturur,<span class="text-danger"> dropdow-menu </span>yazarız. Daha sonra li elemanı tanımlayıp a etiketi koyarız. A etiketine vericeğimiz class ise <span class="text-danger">dropdown-item</span> olucak.                                                                                                                                                                                    
+</p>
+<img src="son5.png" class="rounded">
+    <div class="dropdown p-5 mt-2 mb-5 border border-dark rounded" style="width:300px; ">
+        <button class="btn btn-dark dropdown-toggle" >
+            Açılır Menü Button
+        </button>
+        <ul class="dropdown-menu">
+           <li> <a href="#" class="dropdown-item" >Müzik</a></li>
+           <li> <a href="#"class="dropdown-item" >Resim</a></li> 
+           <li> <a href="#"class="dropdown-item">Oyun</a></li>
+        </ul>
+    </div> 	
+    
+
+<p class="font-weight:bolder;">Butona tıkladığımız zaman menünün açılır olması gerekiyor dolayısıyla burada javascript kullanmamız gerekir. Onun yerine bunları data ile kullanılabilir. Bunu butonun içine <span class="text-danger"> data-bs-toggle </span>yazarak yapabiliriz.                                                                  </p>
+<img src="son6.png" class="rounded">
+
+<div class="dropdown p-5 mt-2 mb-5 border border-dark rounded" style="width:300px; ">
+<button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" >
+    Açılır Menü Button
+</button>
+<ul class="dropdown-menu">
+   <li> <a href="#" class="dropdown-item" >Müzik</a></li>
+   <li> <a href="#"class="dropdown-item" >Resim</a></li> 
+   <li> <a href="#"class="dropdown-item">Oyun</a></li>
+</ul>
+</div> 		
+<p class="font-weight:bolder;"> Eğer link olarak değilde buton olarak menü yapmak istiyorsanız a etiketi yerine button yazılır ve tipi belirtilir.</p>
+<img src="son4.png" class="rounded">
+<div class="dropdown p-5 mt-2 mb-5 border border-dark rounded" style="width:300px;">
+    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" >
+        Açılır Menü Button
+    </button>
+    <ul class=" dropdown-menu">
+       <li> <button type="button" class="dropdown-item" >Müzik</button></li>
+       <li> <button type="button" class="dropdown-item" >Resim</button></li> 
+       <li> <button type="button" class="dropdown-item">Oyun</button></li>
+    </ul>
+</div> 
+
+<p class="font-weight:bolder;"> Açılır menünün bazı özeliklerine bakarsak ;</p>  
+
+<p  class="font-weight-bold"><h4><span class=" badge bg-secondary text-dark">1-Pozisyon:</span> </h4></p>
+<p class="font-weight:bolder;"> Butonların menülerinin açılma yönlerini de değiştirebiliriz. Bunun için en dıştaki div sınıfına <span class="text-danger">dropup(yukarı), dropleft(sol), dropright(sağ)</span> yazabiliriz. </p>
+<img src="son8.png" class="rounded">
+<div class="dropup p-5 mt-2 mb-5 border border-dark rounded" style="width:300px;">
+    <button class="btn btn-dark  dropdown-toggle" data-bs-toggle="dropdown" >
+        Açılır Menü Button
+    </button>
+    <ul class=" dropdown-menu">
+       <li> <button type="button" class="dropdown-item" >Müzik</button></li>
+       <li> <button type="button" class="dropdown-item" >Resim</button></li> 
+       <li> <button type="button" class="dropdown-item">Oyun</button></li>
+    </ul>
+</div> 
+<p  class="font-weight-bold"><h4><span class="badge bg-secondary text-dark ">2-Ekler:</span></h4></p>
+<p class="font-weight:bolder;"> Herhangi bir menüden sonra ayraç veya başlık koyulabilir.Ayraç için li'lerin arasına div classı açıp <span class="text-danger">dropdown-divider</span> yazılabilir. Başlık için ise yine aynı yere li etiketi açıp içine başlık etiketi (h1,h2,h3,h4,h5,h6) koyulur ve bu etikete vericeğimiz class <span class="text-dark">dropdown header</span> olur.      </p>
+<img src="son2.png" class="rounded">
+<div class="dropdown p-5 mt-2 mb-5 border border-dark rounded" style="width:300px;">
+    <button class="btn btn-dark  dropdown-toggle" data-bs-toggle="dropdown" >
+        Açılır Menü Button
+    </button>
+    <ul class=" dropdown-menu">
+       <li> <button type="button" class="dropdown-item" >Müzik</button></li>
+       <div class="dropdown-divider"></div>
+       <li> <button type="button" class="dropdown-item" >Resim</button></li> 
+       <li> <h5 class="dropdown-header">Başlık</h5> </li>
+       <li> <button type="button" class="dropdown-item">Oyun</button></li>
+    </ul>
+</div> 
+<p  class="font-weight-bold"><h4><span class="badge bg-secondary text-dark">3-Kitleme:</span> </h4></p>
+<p class="font-weight:bolder;"> Menüdeki elemanlar aktif veya pasif olarak ayarlanabilir. Hangi elemanı aktif etmek istiyorsam button veya a etiketi içindeki classa <span class="text-danger">active</span>, pasif içinse <span class="text-danger">disabled </span>yazılır.</p>
+<img src="son3.png" class="rounded">
+<div class="dropdown p-5 mt-2 mb-5 border border-dark rounded" style="width:300px;">
+    <button class="btn btn-dark  dropdown-toggle" data-bs-toggle="dropdown" >
+        Açılır Menü Button
+    </button>
+    <ul class=" dropdown-menu">
+       <li> <button type="button" class="dropdown-item active" >Müzik</button></li>
+       <li> <button type="button" class="dropdown-item disabled" >Resim</button></li> 
+       <li> <button type="button" class="dropdown-item">Oyun</button></li>
+    </ul>
+</div> 
+<p class="font-weight:bolder;"> Bunların dışında yaptığımız butonların boyutlarını değiştirmek istersek buton etiketinde oluşturduğuz sınıfa girip<span class="text-danger"> btn-sm</span> veya<span class="text-danger"> btn-lg </span>yazabiliriz.                   </p> 
+<img src="son1.png" class="rounded">
+<div class="dropdown p-5 mt-2 mb-5 border border-dark rounded" style="width:500px;">
+    <button class="btn btn-dark  dropdown-toggle btn-sm" data-bs-toggle="dropdown" >
+        Açılır Menü Button
+    </button>
+    <ul class=" dropdown-menu">
+       <li> <button type="button" class="dropdown-item" >Müzik</button></li>
+       <li> <button type="button" class="dropdown-item" >Resim</button></li> 
+       <li> <button type="button" class="dropdown-item">Oyun</button></li>
+    </ul>
+    <button class="btn btn-dark  dropdown-toggle btn-lg" data-bs-toggle="dropdown" >
+        Açılır Menü Button
+    </button>
+    <ul class=" dropdown-menu">
+       <li> <button type="button" class="dropdown-item" >Müzik</button></li>
+       <li> <button type="button" class="dropdown-item" >Resim</button></li> 
+       <li> <button type="button" class="dropdown-item">Oyun</button></li>
+    </ul>
+</div> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
